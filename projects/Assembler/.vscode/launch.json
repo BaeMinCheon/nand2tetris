@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'Assembler'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=Assembler",
+                    "--package=Assembler"
+                ],
+                "filter": {
+                    "name": "Assembler",
+                    "kind": "bin"
+                }
+            },
+            "args": ["C:\\Users\\qmffk\\Downloads\\nand2tetris\\projects\\06\\Assembler\\target\\debug\\input.asm"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'Assembler'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=Assembler",
+                    "--package=Assembler"
+                ],
+                "filter": {
+                    "name": "Assembler",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
