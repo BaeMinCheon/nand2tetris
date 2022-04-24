@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'VirtualMachine'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=VirtualMachine",
+                    "--package=VirtualMachine"
+                ],
+                "filter": {
+                    "name": "VirtualMachine",
+                    "kind": "bin"
+                }
+            },
+            "args": ["C:/Users/qmffk/Downloads/nand2tetris/projects/07/VirtualMachine/target/debug/input_sample/input.vm"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'VirtualMachine'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=VirtualMachine",
+                    "--package=VirtualMachine"
+                ],
+                "filter": {
+                    "name": "VirtualMachine",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
